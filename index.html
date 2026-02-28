@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DenzMiniWeb</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div class="main">
+    <div class="navb">
+    <nav class="NavBar">
+    <a href="index.html">HOME<span></span></a>
+    <a href="about.html">ABOUT<span></span></a>
+    <a href="contact.html">CONTACT<span></span></a>
+    </nav>
+</div>
+</div>
+<center><h3 class="Navtext">HOME</h3></center>
+<div class="contents">
+    <div class="content">
+    <div class="Cvid">
+        <video class="denV" controls src="file/Video1.mp4"></video>
+        <p class="text">This is my previous video activity about working with links, images, and multimedia. The audio below explains this website fully gives you an details insight of the rest web page.</p>
+        <div class="reads">
+            <audio class="read" id="audio" controls>
+        <source src="file/read1.mp3" type="audio/mpeg">
+        </audio>
+        <div id="caption" style="margin-top: 10px;  color: aqua; width: 370px; text-align: justify; margin-left: 15px;"></div>
+
+<script>
+const captions = [
+  { time: 0, text: "The navigation bar is organized using flexbox functions with a" },
+  { time: 4.98, text: "hover animation that has a 0.5-second transition to highlight the three web" },
+  { time: 9.9, text: "pages. This is the home page, and its file name is" },
+  { time: 14.2, text: "index.html. It serves as the first section of the website" },
+  { time: 18.92, text: "and acts as the main entry point. Multimedia elements are used" },
+  { time: 23.9, text: "to make the page more interactive. It also includes different HTML" },
+  { time: 28.56, text: "elements to demonstrate multimedia integration. First," },
+  { time: 32.88, text: "an image is added to introduce the person who built the website." },
+  { time: 37.72, text: "Next, an audio element is included to explain the content of the web page." },
+  { time: 42.58, text: "It provides an explanation and also demonstrates my ability to import multimedia elements." },
+  { time: 47.32, text: "The button is connected to navigation links that allow users to move between pages." },
+  { time: 52.1, text: "Lastly, the video showcases my previous project." },
+  { time: 56.98, text: "CSS was also used to customize the elements, including the layout." },
+  { time: 61.94, text: "Flexbox was applied for proper positioning, along with a background color." },
+  { time: 66.84, text: "Various CSS functions were used to enhance the overall design." },
+  { time: 72.22, text: "The text, button, video, and image slightly increase in size when hovered." },
+  { time: 74.86, text: "using transform scale with transition effects." },
+  { time: 79.24, text: "The image and video also tilt slightly because of transform rotate effects." },
+  { time: 84.14, text: "The eye-catching colors are created using box shadow." },
+  { time: 88.8, text: "The button also features mixed colors through a linear gradient." },
+  { time: 93.74, text: "The animation runs continuously using customized keyframes." }
+];
+
+  const audio = document.getElementById('audio');
+  const caption = document.getElementById('caption');
+
+  audio.addEventListener('timeupdate', () => {
+    const currentTime = audio.currentTime;
+    let currentCaption = "";
+
+    for (let i = 0; i < captions.length; i++) {
+      if (currentTime >= captions[i].time) {
+        currentCaption = captions[i].text;
+      }
+    }
+
+    caption.textContent = currentCaption;
+  });
+</script>
+        </div>
+    </div>
+
+    <div class="Cpic">
+        <img class="denP" src="file/DenzPic.png" alt="">
+        <p class="text">Hi, I’m Dennis, an IT student from Cordova Public College studying programming and web development. This is a sample of my web development project. I have learned and explored many concepts from various online resources. Click the button below to see where I learn web design and get my ideas.</p>
+        <a href="https://dribbble.com/" target="_blank">
+        <button   class="btn">MORE INFO</button>
+        </a>
+    </div>
+</div>
+</div>
+
+</body>
+</html>

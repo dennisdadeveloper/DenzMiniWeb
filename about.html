@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DenzMiniWeb</title>
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+<div class="main">
+    <div class="navb">
+    <nav class="NavBar">
+    <a href="index.html">HOME<span></span></a>
+    <a href="about.html">ABOUT<span></span></a>
+    <a href="contact.html">CONTACT<span></span></a>
+    </nav>
+</div>
+</div>
+<center><h3 class="Navtext">ABOUT</h3></center>
+<div class="contents">
+    <div class="content">
+    <div class="Cvid">
+        <video class="denV" controls src="file/cyfi (1).mp4"></video>
+        <p class="text">Directed by Joachim Rønning, Tron: Ares follows a sophisticated program on a dangerous mission from the digital world to the real world. Starring Jared Leto, Greta Lee, and Evan Peters, the film depicts humankind’s first encounter with sentient AI beings.</p>
+        <div class="reads">
+            <audio class="read" id="audio" controls>
+        <source src="file/read2.mp3" type="audio/mpeg">
+        </audio>
+        <div id="caption" style="margin-top: 10px;  color: aqua; width: 370px; text-align: justify; margin-left: 15px;"></div>
+
+<script>
+const captions = [
+  { time: 0.02, text: "The second web page has same style and it's very helpful to reuse the code, so." },
+  { time: 4.96, text: "This is the about web page and its file name is about.html." },
+  { time: 9.35, text: "This part is second section of the website and where the hobby, sci-fi movie and audio that explain this web page." },
+  { time: 15.24, text: "It uses multimedia elements to make the page more interactive." },
+  { time: 18.89, text: "It also contains different HTML elements to demonstrate multimedia integration." },
+  { time: 23.62, text: "First, the image imported is my hobby." },
+  { time: 26.42, text: "Next, the audio is included to explain the content of the web page." },
+  { time: 30.48, text: "It contains an explanation and serves as proof of my capability to import elements." },
+  { time: 35.02, text: "The button is linked to online chess where I play most of the time." },
+  { time: 38.47, text: "Lastly, the video imported is a sci-fi movie sample." },
+  { time: 42.07, text: "I also used CSS to customize the elements, such as the layout." },
+  { time: 46.46, text: "I use the flex function for proper positioning and applied a background color." },
+  { time: 50.70, text: "The color chosen helped to contrast and attract the attention specially the captions." },
+  { time: 54.82, text: "The web page uses different CSS functions to enhance its design and overall appearance." }
+];
+
+  const audio = document.getElementById('audio');
+  const caption = document.getElementById('caption');
+
+  audio.addEventListener('timeupdate', () => {
+    const currentTime = audio.currentTime;
+    let currentCaption = "";
+
+    for (let i = 0; i < captions.length; i++) {
+      if (currentTime >= captions[i].time) {
+        currentCaption = captions[i].text;
+      }
+    }
+
+    caption.textContent = currentCaption;
+  });
+</script>
+        </div>
+    </div>
+
+    <div class="Cpic">
+        <img class="denP" src="file/chess.jpg" alt="">
+        <p class="text">My hobby is playing chess. It is a very sequential game that requires you to consider all possible outcomes before making a move. I recently competed in a tournament at CPC and won second place. I also play chess online; you can click the button below to find me on Chess.com.</p>
+        <a href="https://www.chess.com/" target="_blank">
+        <button   class="btn">Chess.com</button>
+        </a>
+    </div>
+</div>
+</div>
+
+</body>
+</html>

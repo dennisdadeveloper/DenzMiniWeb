@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DenzMiniWeb</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+<div class="main">
+    <div class="navb">
+    <nav class="NavBar">
+    <a href="index.html">HOME<span></span></a>
+    <a href="about.html">ABOUT<span></span></a>
+    <a href="contact.html">CONTACT<span></span></a>
+    </nav>
+</div>
+</div>
+<center><h3 class="Navtext">CONTACT </h3></center>
+<div class="contents">
+    <div class="content">
+    <div class="Cvid">
+        <video class="denV" controls src="file/dayOfLife (1).mp4"></video>
+        <p class="text">This is my previous video activity about working with links, images, and multimedia. The audio below explains this website.</p>
+        <div class="reads">
+            <audio class="read" id="audio" controls>
+        <source src="file/read3.mp3" type="audio/mpeg">
+        </audio>
+        <div id="caption" style="margin-top: 10px;  color: aqua; width: 370px; text-align: justify; margin-left: 15px;"></div>
+
+<script>
+const captions = [
+    { time: 0.1, text: "This is the contact page, and it does use the same structure," },
+  { time: 4.5, text: "and its file name is contact.html. It is the third web page." },
+  { time: 10.2, text: "Multimedia elements are used to make the page more interactive." },
+  { time: 14.3, text: "First, an image of my favorite place. Next, an audio" },
+  { time: 19.0, text: "element is included to explain the content of the web page." },
+  { time: 23.3, text: "The button is connected to navigate directly to my Facebook account." },
+  { time: 27.8, text: "Lastly, the video is a sample of IT student life," },
+  { time: 32.8, text: "and the CSS function and visual effects are still the same." },
+  { time: 36.8, text: "It's very helpful to reuse the code." }
+];
+
+  const audio = document.getElementById('audio');
+  const caption = document.getElementById('caption');
+
+  audio.addEventListener('timeupdate', () => {
+    const currentTime = audio.currentTime;
+    let currentCaption = "";
+
+    for (let i = 0; i < captions.length; i++) {
+      if (currentTime >= captions[i].time) {
+        currentCaption = captions[i].text;
+      }
+    }
+
+    caption.textContent = currentCaption;
+  });
+</script>
+        </div>
+    </div>
+
+    <div class="Cpic">
+        <img class="denP" src="file/park.jpg" alt="">
+        <p class="text">The park is my favorite place because it’s calm and full of natural vibes. Click the button below to visit my Facebook account.</p>
+        <a href="https://www.facebook.com/kie.kaizen" target="_blank">
+        <button   class="btn">MORE INFO</button>
+        </a>
+    </div>
+</div>
+</div>
+
+</body>
+</html>
